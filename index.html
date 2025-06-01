@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciador de Produtos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛒 Gerenciador de Produtos</h1>
+
+    <form id="formProduto">
+      <input type="text" id="nome" placeholder="Nome do produto" required />
+      <input type="text" id="descricao" placeholder="Descrição" />
+      <input type="number" id="preco" placeholder="Preço (R$)" required step="0.01" />
+      <input type="number" id="estoque" placeholder="Estoque" required />
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <div id="mensagem" class="mensagem"></div>
+
+    <div id="listaProdutos" class="produtos"></div>
+  </div>
+
+  <!-- Modal de Edição -->
+  <div class="modal" id="modalEdicao">
+    <div class="modal-content">
+      <h2>Editar Produto</h2>
+      <input type="text" id="editNome" placeholder="Nome" />
+      <input type="text" id="editDescricao" placeholder="Descrição" />
+      <input type="number" id="editPreco" placeholder="Preço" />
+      <input type="number" id="editEstoque" placeholder="Estoque" />
+      <button id="btnSalvarEdicao">Salvar</button>
+      <button id="btnCancelarEdicao">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
